@@ -10,19 +10,20 @@ export default class ListItem extends React.Component {
     }
 
     render(){
-        const {date, startTime, endTime, totale, reason, id} = this.props
-        let totalString=''
-        if(totale===true){
-            totalString='true'
-        }else{
-            totalString='false'
-        }
+        console.log(document.location.href)
+        const {date, startTime, endTime, /*totale,*/ reason, id} = this.props
+        // let totalString=''
+        // if(totale===true){
+        //     totalString='true'
+        // }else{
+        //     totalString='false'
+        // }
 
         return (<div>
             <Card title={date}>
                 <div>{startTime}</div>
                 <div>{endTime}</div>
-                <div>{totalString}</div>
+                {/* <div>{totalString}</div> */}
                 <div>{reason}</div>
                 <Button waves='light'>
                     <Link to={`/${id}`}>plus de details</Link>   
