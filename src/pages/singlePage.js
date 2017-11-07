@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import {ProgressBar,Navbar,NavItem} from 'react-materialize'
 
-import List from './../components/list'
+import SinglePageListItem from './../components/singlePageListItem'
 
 
 export default class SinglePage extends React.Component {
@@ -27,8 +27,8 @@ export default class SinglePage extends React.Component {
     }
 
     render(){
-        const {match}=this.props
-        const id = parseInt(match.params.id) 
+        // const {match}=this.props
+        // const id = parseInt(match.params.id) 
 
         console.log('data',this.state.receiveData)
       
@@ -54,7 +54,7 @@ export default class SinglePage extends React.Component {
                 </Navbar>
             </div>
             <div>
-                {this.state.receiveData.length ===0 ? <ProgressBar/>:<List data={this.state.receiveData}/>}
+                {this.state.receiveData.length ===0 ? <ProgressBar/>:<SinglePageListItem data={this.state.receiveData}/>}
             </div>
         </div>)   
     }
