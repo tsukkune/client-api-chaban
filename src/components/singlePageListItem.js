@@ -20,7 +20,7 @@ export default class SinglePageListItem extends React.Component {
         
         this.props.data.map(row=>{date=row.date,startTime=row.start,endTime=row.end,reason=row.reason, link=row.link})
         
-        return (<div className="details">>
+        return (<div className="details">
             <h4>Details</h4>
             <Card>
                 <div >Date : {date}</div>

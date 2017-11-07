@@ -31,7 +31,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className="App">
-        <h2>fermetures</h2>
+        <h2>Fermetures Pont Jacques-Chaban-Delmas</h2>
         <Search/> 
         {!this.state.receiveData.length ? <ProgressBar/>:<List data={this.state.receiveData}/>}
       </div>
