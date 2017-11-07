@@ -10,10 +10,10 @@ export default class Search extends React.Component {
 
     render(){
         return (
-            <div>
-                <SearchInput/>
-                <SearchInput/>
-                <Button/>
+            <div className="search">
+                <SearchInput text='to'/>
+                <SearchInput text='from'/>
+                <Button>send</Button>
             </div>
         )   
     }
