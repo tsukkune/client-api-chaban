@@ -18,12 +18,12 @@ class HomePage extends Component {
     if(this.state.from===null && this.state.to===null){
       fetch('http://localhost:1337')
       .then(res=>res.json())
-      .then(data=>this.setState({receiveData:data}),data=>{this.setState({receiveData:[]});alert('error')})
+      .then(data=>this.setState({receiveData:data}),data=>{this.setState({receiveData:[]});alert('erreur api non disponible')})
       .catch(e=>console.log(e))
     }else if(this.state.from!==null || this.state.to!==null){
       fetch('http://localhost:1337/?from='+`${this.state.from}`+'&to='+`${this.state.to}`)
       .then(res=>res.json())
-      .then(data=>this.setState({receiveData:data}),data=>{this.setState({receiveData:[]});alert('error')})
+      .then(data=>this.setState({receiveData:data}),data=>{this.setState({receiveData:[]});alert('erreur api non disponible')})
       .catch(e=>console.log(e))
     }
   }

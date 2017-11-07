@@ -27,8 +27,8 @@ export default class SinglePage extends React.Component {
     }
 
     render(){
-        // const {match}=this.props
-        // const id = parseInt(match.params.id) 
+        const {match}=this.props
+        const id = parseInt(match.params.id) 
 
         console.log('data',this.state.receiveData)
       
@@ -41,16 +41,12 @@ export default class SinglePage extends React.Component {
                             Retour
                         </Link>
                     </NavItem>
-                    {/* <NavItem waves='light'>
-                        <Link to={`/${id-1}`}>
-                            precedant
-                        </Link>
+                    <NavItem waves='light' href={`/${id-1}`}>
+                    precedant
                     </NavItem>
-                    <NavItem waves='light'>
-                        <Link to={`/${id+1}`}>
+                    <NavItem waves='light' href={`/${id+1}`}>
                             Suivant
-                        </Link>
-                    </NavItem> */}
+                    </NavItem>
                 </Navbar>
             </div>
             <div>
