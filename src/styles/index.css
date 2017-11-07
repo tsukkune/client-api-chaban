@@ -56,10 +56,21 @@ a {
 
 .details {
   text-align: center;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .totale p{
   margin-top: -10px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.interdit {
+  float: right;
+  padding-top: 0;
+  text-align: center;
 }

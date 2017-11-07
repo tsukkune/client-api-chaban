@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Card, CardTitle} from 'react-materialize'
+import Interdit from '../styles/img/interdit.jpg'
 
 export default class SinglePageListItem extends React.Component {
     constructor(props){
@@ -29,7 +30,12 @@ export default class SinglePageListItem extends React.Component {
 
             return (<div className="details">
                 <h4>Details</h4>
-                <img src="./../styles/img/sample-1.jpg"/>
+                <div>
+                    {totale ? <Card>
+                        <img src={Interdit}/>
+                        <p> Fermeture Totale </p>
+                    </ Card>:null}
+                </div>
                 <Card>
                     <div >Date : {date}</div>
                 </Card>
