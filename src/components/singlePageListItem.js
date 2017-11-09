@@ -19,10 +19,19 @@ export default class SinglePageListItem extends React.Component {
 
         if(this.props.data[0].error==='Not found'){
             return(<div className="details">
-                <h4>Details</h4>
-                <Card>
+                <div class="container">
+                    <h1>404 Not found <span>:(</span></h1>
+                    <p>Sorry, but the page you were trying to view does not exist.</p>
+                    <p>It looks like this was the result of either:</p>
+                    <ul>
+                        <li>a mistyped address</li>
+                        <li>an out-of-date link</li>
+                    </ul>
+                </div>
+                {/*<h4>Details</h4>
+                 <Card>
                     <div >erreur : pas d'evenement</div>
-                </Card>
+                </Card> */}
                 <Button waves='light' node='a' target="_blank" href={lienOffi}>site officiel</Button>
             </div>)
         }else{
@@ -30,7 +39,7 @@ export default class SinglePageListItem extends React.Component {
 
             return (<div className="details">
                 <h4>Details</h4>
-                <div>
+                <div className="carte-interdit">
                     {totale ? <Card>
                         <img src={Interdit}/>
                         <p> Fermeture Totale </p>

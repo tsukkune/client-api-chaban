@@ -6,14 +6,38 @@ export default class Search extends React.Component {
     constructor(props){
         super(props)
         console.log('props : ',props)
+        this.state={
+            startDate:null,
+            endDate:null
+        }
+    }
+
+    handleChangeInput = (text,date)=>{
+        if (text==='to'){
+            this.setState({
+                endDate:date 
+            })
+        }
+        else if (text==='from'){
+            this.setState({
+                startDate:date
+            })
+        }     
+    }
+
+    handleButtonClick = () =>{
+        console.log('search from',this.state.startDate)
+        console.log('search to',this.state.endDate)
+        this.props.callback(this.state.startDate, this.state.endDate)
     }
 
     render(){
         return (
             <div className="search">
-                <SearchInput text='to'/>
-                <SearchInput text='from'/>
-                <Button>send</Button>
+                <div>format dd-mm-yyyy</div>
+                <SearchInput text='from' callback={this.handleChangeInput}/>
+                <SearchInput text='to' callback={this.handleChangeInput}/>
+                <Button onClick={this.handleButtonClick}>send</Button>
             </div>
         )   
     }
