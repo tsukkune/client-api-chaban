@@ -1,12 +1,8 @@
 import React from 'react';
-import {Button, Card, CardTitle} from 'react-materialize'
+import {Button, Card} from 'react-materialize'
 import Interdit from '../styles/img/interdit.jpg'
 
 export default class SinglePageListItem extends React.Component {
-    constructor(props){
-        super(props)
-    }
-
 
     render(){
         let date = null
@@ -35,13 +31,13 @@ export default class SinglePageListItem extends React.Component {
                 <Button waves='light' node='a' target="_blank" href={lienOffi}>site officiel</Button>
             </div>)
         }else{
-            this.props.data.map(row=>{date=row.date,startTime=row.start,endTime=row.end,reason=row.reason, link=row.link,totale=row.totale})
+            this.props.data.map(row=>{date=row.date, startTime=row.start, endTime=row.end, reason=row.reason, link=row.link, totale=row.totale})
 
             return (<div className="details">
                 <h4>Details</h4>
                 <div className="carte-interdit">
                     {totale ? <Card>
-                        <img src={Interdit}/>
+                        <img alt="fermeture total" src={Interdit}/>
                         <p> Fermeture Totale </p>
                     </ Card>:null}
                 </div>

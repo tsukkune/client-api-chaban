@@ -2,10 +2,6 @@ import React from 'react';
 import ListItem from './listItem'
 
 export default class List extends React.Component {
-    constructor(props){
-        super(props)
-        console.log('props : ',props)
-    }
 
     render(){
         return (<div>

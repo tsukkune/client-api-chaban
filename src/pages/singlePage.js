@@ -29,8 +29,6 @@ export default class SinglePage extends React.Component {
     render(){
         const {match}=this.props
         const id = parseInt(match.params.id) 
-
-        console.log('data',this.state.receiveData)
       
         return (
         <div>

@@ -5,7 +5,6 @@ import {Button} from 'react-materialize'
 export default class Search extends React.Component {
     constructor(props){
         super(props)
-        console.log('props : ',props)
         this.state={
             startDate:null,
             endDate:null
@@ -26,8 +25,6 @@ export default class Search extends React.Component {
     }
 
     handleButtonClick = () =>{
-        console.log('search from',this.state.startDate)
-        console.log('search to',this.state.endDate)
         this.props.callback(this.state.startDate, this.state.endDate)
     }
 

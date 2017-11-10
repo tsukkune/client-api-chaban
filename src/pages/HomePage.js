@@ -35,7 +35,6 @@ class HomePage extends Component {
   }  
 
   componentDidMount(){
-      console.log("AZERTYUI")
       fetch('http://localhost:1337')
       .then(res=>res.json())
       .then(data=>this.setState({receiveData:data}),data=>{this.setState({receiveData:[]});alert('erreur api non disponible')})
@@ -43,7 +42,6 @@ class HomePage extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         <h2>Fermetures Pont Jacques-Chaban-Delmas</h2>
